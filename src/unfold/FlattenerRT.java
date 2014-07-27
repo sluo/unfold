@@ -269,15 +269,6 @@ public class FlattenerRT {
         float x21 = x2a-x2b;
         float x22 = x2a+x2b;
 
-        //float y11 = W2*eli*x11;
-        //float y12 = W2*eli*x12;
-        //float y21 = W0*eli*x21;
-        //float y22 = W1*eli*x22;
-        //float y1a = y11+y12;
-        //float y1b = y11-y12;
-        //float y2a = y21+y22;
-        //float y2b = y21-y22;
-
         float b1 = W2*eli*( x11*u1i+x21*u2i);
         float b2 = W2*eli*(-x21*u1i+x11*u2i);
         float b3 = W0*eli*( x12*u1i+x22*u2i);
@@ -582,17 +573,6 @@ public class FlattenerRT {
   }
 
   ///////////////////////////////////////////////////////////////////////////
-  // utilities
-
-  private static float[][][][] scopy(float[][][][] x) {
-    int n1 = x[0][0][0].length;
-    int n2 = x[0][0].length;
-    int n3 = x[0].length;
-    int n4 = x.length;
-    float[][][][] y = new float[n4][n3][n2][n1];
-    scopy(x,y);
-    return y;
-  }
 
   private static void scopy(float[][][][] x, float[][][][] y) {
     int n4 = x.length;
