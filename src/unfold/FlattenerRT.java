@@ -573,6 +573,16 @@ public class FlattenerRT {
   }
 
   ///////////////////////////////////////////////////////////////////////////
+  
+  private static float[][][][] scopy(float[][][][] x) {
+    int n1 = x[0][0][0].length;
+    int n2 = x[0][0].length;
+    int n3 = x[0].length;
+    int n4 = x.length;
+    float[][][][] y = new float[n4][n3][n2][n1];
+    scopy(x,y);
+    return y;
+  }
 
   private static void scopy(float[][][][] x, float[][][][] y) {
     int n4 = x.length;
