@@ -1,0 +1,14 @@
+/.cache
+/.classpath
+/.project
+/.pydevproject
+/.idea
+/.gradle
+
+build/
+*.iml
+*.png
+*.zip
+*.swp
+*.class
+*.DS_Store
