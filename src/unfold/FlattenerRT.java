@@ -150,10 +150,9 @@ public class FlattenerRT {
   private float _sigma1 = 6.0f; // half-width of smoother in 1st dimension
   private float _sigma2 = 6.0f; // half-width of smoother in 2nd dimension
   private float _epsilon = 0.000f; // damping for stability?
-  private float _small = 0.010f; // stop CG iterations if residuals are small
-  //private float _small = 0.001f; // stop CG iterations if residuals are small
+  private float _small = 0.01f; // stop CG iterations if residuals are small
   private int _inner = 10; // maximum number of inner CG iterations
-  private int _outer = 50; // maximum number of outer iterations
+  private int _outer = 10; // maximum number of outer iterations
 
   private static class A2 implements CgSolver.A {
     A2(float epsilon, Smoother2 smoother, float[][][] p) {
